@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+
+    /* Primary */
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--veryLightGray);
+    font-size: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 350px;
+    max-height: 1690px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    color:var(--transparentWhite);
+    padding: 2rem 3rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    color: var(--veryLightGray);
+    min-height: 450px;
+    position: relative;
+}
+
+.header {
+    font-size: 3rem;
+    
+}
+
+.paragraph {
+    color: var(--transparentWhite);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.75rem;
+    line-height: 2;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.sedans {
+    background-color: var(--brightOrange);
+    border-radius: 8px 8px 0 0;
+}
+
+.suvs {
+    background-color: var(--darkCyan);
+}
+
+.luxury {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 0 8px 8px;
+}
+
+.button {
+    background-color: var(--veryLightGray);
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px;
+    width: 120px;
+    margin-bottom: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.sedans .button {
+    color: var(--brightOrange);
+}
+
+.suvs .button {
+    color: var(--darkCyan)
+}
+
+.luxury .button {
+    color: var(--veryDarkCyan);
+}
+
+.sedans .button:hover {
+    transition-duration: 500ms;
+    color: var(--veryLightGray);
+    border: 1px solid var(--veryLightGray);
+    background-color: var(--brightOrange);
+    cursor: pointer;
+}
+
+.suvs .button:hover {
+    transition-duration: 500ms;
+    color: var(--veryLightGray);
+    border: 1px solid var(--veryLightGray);
+    background-color: var(--darkCyan);
+    cursor: pointer;
+}
+
+.luxury .button:hover {
+    transition-duration: 500ms;
+    color: var(--veryLightGray);
+    border: 1px solid var(--veryLightGray);
+    background-color: var(--veryDarkCyan);
+    cursor: pointer;
+}
+
+@media (min-width: 550px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        min-height: 450px;
+        min-width: 1200px;
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+
+    .sedans {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .luxury {
+        border-radius: 0 8px 8px 0;
+    }
+    
+}
